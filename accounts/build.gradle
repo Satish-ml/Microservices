@@ -9,9 +9,16 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(23
+		)
 	}
 }
+
+bootJar{
+archiveBaseName ='accounts-service'
+	version = '1.0.0'
+}
+
 
 ext{
 	lombokVersion='1.18.32'
