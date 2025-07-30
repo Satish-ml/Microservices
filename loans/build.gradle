@@ -12,6 +12,14 @@ java {
 		languageVersion = JavaLanguageVersion.of(23)
 	}
 }
+jib {
+	container {
+		mainClass = 'com.example.loans.LoansApplication' // Replace with your actual main class
+	}
+	from {
+		image = 'eclipse-temurin:23-jre' // or another Java 23 image
+	}
+}
 
 ext{
 	lombokVersion='1.18.32'
