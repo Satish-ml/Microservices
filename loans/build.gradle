@@ -19,6 +19,9 @@ jib {
 	from {
 		image = 'eclipse-temurin:23-jre' // or another Java 23 image
 	}
+	to {
+		image = 'your-dockerhub-username/your-image-name:tag'
+	}
 }
 
 ext{
