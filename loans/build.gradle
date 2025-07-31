@@ -12,6 +12,17 @@ java {
 		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
+jib {
+	container {
+		mainClass = 'com.example.loans.LoansApplication' // Replace with your actual main class
+	}
+	from {
+		image = 'eclipse-temurin:23-jre' // or another Java 23 image
+	}
+	to {
+		image = 'your-dockerhub-username/your-image-name:tag'
+	}
+}
 
 ext{
 	lombokVersion='1.18.32'

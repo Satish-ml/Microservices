@@ -7,6 +7,18 @@ plugins {
 group = 'com.easybytes'
 version = '0.0.1-SNAPSHOT'
 
+jib {
+	container {
+		mainClass = 'com.example.cards.CardsApplication' // Replace with your actual main class
+	}
+	from {
+		image = 'eclipse-temurin:23-jre' // or another Java 23 image
+	}
+	to {
+		image = 'your-dockerhub-username/your-image-name:tag'
+	}
+}
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
