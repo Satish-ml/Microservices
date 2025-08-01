@@ -6,12 +6,7 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password: ''
-  config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
-  profiles:
-    active: qa
+
   h2:
     console:
       enabled: true
@@ -22,10 +17,10 @@ spring:
     show-sql: true
 
 build:
-  version: "3.0"
+  version: "4.0"
 
 accounts:
-  message: "Welcome to EazyBank accounts related local APIs "
+  message: "Welcome to EazyBank accounts related qa APIs "
   contactDetails:
     name: "John Doe - Developer"
     email: "john@eazybank.com"
